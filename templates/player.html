@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 50vw;
+      max-width: 960px;
+      max-height: 540px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100vw;
+        height: 56.25vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <iframe
+    src="https://www.youtube.com/embed/{{ video_id }}?rel=0&modestbranding=1"
+    allowfullscreen>
+  </iframe>
+</body>
+</html>

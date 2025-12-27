@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+env/
+venv/
+
+# Database
+curefeed.db
+
+# Personal config
+channels.json
+
+# OS
+.DS_Store
+Thumbs.db

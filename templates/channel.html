@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+
+<h2 style="margin-bottom: 32px">{{ channel.name }}</h2>
+
+{% for video in videos %}
+<div class="card">
+  <img src="{{ video.thumbnail }}" alt="thumbnail" class="thumbnail" />
+
+  <div class="video-meta">
+    <h3 class="video-title">{{ video.title }}</h3>
+
+    {% if video.watched %}
+    <p class="muted">watched</p>
+    {% endif %}
+
+    <form method="POST" action="/play/{{ video.id }}" target="_blank">
+      <button type="submit">Watch</button>
+    </form>
+  </div>
+</div>
+{% endfor %}
+
+<!-- Escape hatch -->
+<a
+  href="https://www.youtube.com/channel/{{ channel.channel_id }}"
+  target="_blank"
+  class="muted"
+>
+  View full channel on YouTube
+</a>
+
+{% endblock %}

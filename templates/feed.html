@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %} {% if feed %} {% for item in
+feed%}
+<div class="card">
+  <img src="{{ item.video.thumbnail }}" alt="thumbnail" class="thumbnail" />
+
+  <div class="video-meta">
+    <h3 class="video-title">{{ item.video.title }}</h3>
+
+    <p class="muted">{{ item.channel.name }}</p>
+
+    <form method="POST" action="/play/{{ item.video.id }}" target="_blank">
+      <button type="submit">Watch</button>
+    </form>
+  </div>
+</div>
+{% endfor %} {% else %}
+<!-- Empty feed = intentional -->
+{% endif %} {% endblock %}

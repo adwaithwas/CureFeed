@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CureFeed</title>
+
+    <style>
+      body {
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        background: #fafafa;
+        color: #222;
+        margin: 0;
+      }
+
+      .layout {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* ---------- SIDEBAR ---------- */
+      .sidebar {
+        width: 64px;
+        border-right: 1px solid #eee;
+        padding: 16px 8px;
+      }
+
+      .sidebar a {
+        display: block;
+        margin-bottom: 16px;
+        text-decoration: none;
+        color: #444;
+        font-size: 18px;
+      }
+
+      /* ---------- MAIN CONTENT ---------- */
+      .content {
+        flex: 1;
+        padding: 48px;
+      }
+
+      /* ---------- CARD LAYOUT ---------- */
+      .card {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+
+        max-width: 640px; /* 🔥 forces wrapping */
+        padding: 20px;
+        margin-bottom: 24px;
+
+        border: 1px solid #eee;
+        border-radius: 14px;
+        background: #fff;
+      }
+
+      .thumbnail {
+        width: 160px; /* 🔥 thumbnail size */
+        height: auto;
+        border-radius: 10px;
+        flex-shrink: 0;
+      }
+
+      .video-meta {
+        max-width: 420px; /* 🔥 text boundary */
+      }
+
+      .video-title {
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0 0 8px 0;
+        font-weight: 600;
+      }
+
+      .muted {
+        color: #777;
+        font-size: 14px;
+        margin: 0 0 8px 0;
+      }
+
+      a {
+        font-size: 14px;
+        color: #5b6cff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        margin-left: 10px;
+      }
+
+      /* ---------- MOBILE (phones) ---------- */
+      @media (max-width: 768px) {
+        .layout {
+          flex-direction: column;
+        }
+
+        /* Sidebar becomes top bar */
+        .sidebar {
+          width: 100%;
+          display: flex;
+          gap: 16px;
+          border-right: none;
+          border-bottom: 1px solid #eee;
+          padding: 12px 16px;
+        }
+
+        .content {
+          padding: 24px 16px;
+        }
+
+        /* Card becomes vertical */
+        .card {
+          flex-direction: column;
+          max-width: 100%;
+          padding: 16px;
+        }
+
+        .thumbnail {
+          width: 100%;
+          max-width: 100%;
+          border-radius: 12px;
+        }
+
+        .video-meta {
+          max-width: 100%;
+          margin-top: 12px;
+        }
+
+        .video-title {
+          font-size: 15px;
+          line-height: 1.45;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="heading">CureFeed</h1>
+    <div class="layout">
+      <div class="sidebar">
+        <a href="/">●</a>
+        {% for ch in channels %}
+        <a href="/channel/{{ ch.id }}">○</a>
+        {% endfor %}
+      </div>
+
+      <div class="content">{% block content %}{% endblock %}</div>
+    </div>
+  </body>
+</html>
