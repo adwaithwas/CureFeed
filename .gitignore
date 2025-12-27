@@ -10,7 +10,7 @@ venv/
 curefeed.db
 
 # Personal config
-channels.json
+channels.txt
 
 # OS
 .DS_Store
