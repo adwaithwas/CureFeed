@@ -36,4 +36,3 @@ cp channels.example.json channels.json
 edit channels.json according to your choice
 pip install -r requirements.txt
 python app.py
-
