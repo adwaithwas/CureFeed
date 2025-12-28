@@ -33,6 +33,8 @@ Clone the repository, configure your channels, install dependencies, and run the
 git clone https://github.com/adwaithwas/CureFeed.git
 cd curefeed
 cp channels.example.json channels.json
+```
+
 edit channels.json according to your choice
 pip install -r requirements.txt
 python app.py
