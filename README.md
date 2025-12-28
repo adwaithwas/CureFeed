@@ -30,7 +30,7 @@ These are intentional design choices.
 Clone the repository, configure your channels, install dependencies, and run the app:
 
 ```bash
-git clone https://github.com/your-username/curefeed.git
+git clone https://github.com/adwaithwas/CureFeed.git
 cd curefeed
 cp channels.example.json channels.json
 edit channels.json according to your choice
