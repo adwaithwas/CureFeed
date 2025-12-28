@@ -10,7 +10,7 @@ A minimal, intentional YouTube feed.
 
 ## Setup
 1. Clone repo
-2. Open channels.json
+2. Change channels.example.json -> channels.json
 3. Add your channel IDs
 4. `pip install -r requirements.txt`
 5. `python app.py`
