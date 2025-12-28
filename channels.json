@@ -1,13 +1,23 @@
 [
   {
-    "id": "channel-id-1",
-    "name": "Channel Name 1",
-    "channel_id": "UCxxxxxxxxx"
+    "id": "lifeliftlogic",
+    "name": "Aman Malhotra",
+    "channel_id": "UC7rV6JhcZjaXmOy3wRB0cUA"
   },
   {
-    "id": "channel-id-2",
-    "name": "Channel Name 2",
-    "channel_id": "UCxxxxxxxxx"
+    "id": "youriamness",
+    "name": "Power Of I AM",
+    "channel_id": "UCivS-ybRMYBq_xvfVMn-NGw"
+  },
+  {
+    "id": "restisscience",
+    "name": "The Rest Is Science",
+    "channel_id": "UC6nSFpj9HTCZ5t-N3Rm3-HA"
+  },
+  {
+    "id": "vimoh",
+    "name": "Vimoh",
+    "channel_id": "UCxCX94qhCjYNvZkj6afo5Gg"
   }
-
 ]
+
