@@ -26,10 +26,14 @@ These are intentional design choices.
 
 
 ## Setup
-1. Clone repo
-2. Change channels.example.json -> channels.json
-3. Add your channel IDs
-4. `pip install -r requirements.txt`
-5. `python app.py`
 
-CureFeed is an inbox, not a feed.
+Clone the repository, configure your channels, install dependencies, and run the app:
+
+```bash
+git clone https://github.com/your-username/curefeed.git
+cd curefeed
+cp channels.example.json channels.json
+edit channels.json according to your choice
+pip install -r requirements.txt
+python app.py
+
